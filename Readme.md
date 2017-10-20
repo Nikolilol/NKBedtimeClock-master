@@ -1,8 +1,8 @@
 ## NKBedtimeClock
 
-An Objective-C version copy from  [LeonardoCardoso](https://github.com/LeonardoCardoso/BedtimeClock)
-I just add 24-hours calculate part.
-This is a view like the clock of bedtime that can set sleep time, wake time and sleep duration time.
+An Objective-C version copy from  [LeonardoCardoso](https://github.com/LeonardoCardoso/BedtimeClock)</br>
+I just add 24-hours calculate part.</br>
+This is a view like the clock of bedtime that can set sleep time, wake time and sleep duration time.</br>
 
 ![ScreenShot.gif](Images/ScreenShot.gif)
 
@@ -56,4 +56,4 @@ See below the full color reference:
 
 ## License
 
-BedtimeClock is released under the MIT license. See [LICENSE](https://github.com/leocardz.com/BedtimeClock/blob/master/LICENSE) for details.
+BedtimeClock is released under the MIT license. See [LICENSE](https://github.com/Nikolilol/NKBedtimeClock-master/blob/master/LICENSE) for details.
