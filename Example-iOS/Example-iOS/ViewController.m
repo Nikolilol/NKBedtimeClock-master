@@ -75,7 +75,7 @@
     _sleepValueLabel.text = sleepTime;
     _wakeValueLabel.text = wakeTime;
     
-    NSLog(@"didUpdateSleepTime:%@, wakeTime:%@, sleepDuration:%@", sleepTime, wakeTime, sleepDuration);
+    NSLog(@"sleepTime:%@, wakeTime:%@, sleepDuration:%@", sleepTime, wakeTime, sleepDuration);
 }
 
 

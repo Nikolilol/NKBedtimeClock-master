@@ -1,30 +1,30 @@
-## BedtimeClock
+## NKBedtimeClock
 
-My sketches for iOS 10 bedtime clock. **Unfinished**.
+An Objective-C version copy from  [LeonardoCardoso](https://github.com/LeonardoCardoso/BedtimeClock)
+I just add 24-hours calculate part.
+This is a view like the clock of bedtime that can set sleep time, wake time and sleep duration time.
 
-![dragging-around.gif](Images/dragging-around.gif)
+![ScreenShot.gif](Images/ScreenShot.gif)
 
 ### Init
 
-```swift
+```Objective-C
 // Time jumps at each five minutes
-
-let bedtimeClockView: BedtimeClockView = BedtimeClockView(
-    frame: CGRect(x: 0, y: 0, width: 320, height: 320),
-    startTimeInMinutes: 126, // Hour: 02:06, will display 02:05
-    endTimeInMinutes: 552 // Hour: 09:12, will display 09:10
-)
+int sleepTime = 1320; // Hour: 22:00
+int wakeTime = 360;   // Hour: 06:00
+NKBedtimeClock *bedtimeClock = [[NKBedtimeClock alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width) sleepTimeInMinutes:sleepTime wakeTimeInMinutes:wakeTime];
+bedtimeClock.delegate = self;
+[contentView addSubview:bedtimeClock];
 ```
 
-### Observer
+### delegate
 
 Watch the changes using this snippet:
 
-```swift
-self.bedtimeClockView.observer = { start, end, durationInMinutes in
+```Objective-C
+- (void)NKBedtimeClock:(NKBedtimeClock *)bedtimeClock didUpdateSleepTime:(NSString *)sleepTime wakeTime:(NSString *)wakeTime sleepDuration:(NSString *)sleepDuration{
 
-    print(start, end, durationInMinutes) // Will print: 01:00, 09:00, 480
-
+NSLog(@"sleepTime:%@, wakeTime:%@, sleepDuration:%@", sleepTime, wakeTime, sleepDuration);
 }
 ```
 
@@ -32,22 +32,23 @@ self.bedtimeClockView.observer = { start, end, durationInMinutes in
 
 You can change the colors whenever you want. Let's say if you want to give an impression of enabling and disabling the clock. To do so, use this function:
 
-```swift
+```Objective-C
 // Change nil for the color of your choice
- 
-self.bedtimeClockView.changePalette(
-    trackBackgroundColor = nil,
-    centerBackgroundColor = nil,
-    wakeBackgroundColor = nil,
-    wakeColor = nil,
-    sleepBackgroundColor = nil,
-    sleepColor = nil,
-    trackColor = nil,
-    numberColor = nil,
-    thickPointerColor = nil,
-    thinPointerColor = nil,
-    centerLabelColor = nil
-)
+self.bedtimeClock.trackBackgroundColor = nil
+...
+also{
+trackBackgroundColor = nil,
+centerBackgroundColor = nil,
+wakeBackgroundColor = nil,
+wakeColor = nil,
+sleepBackgroundColor = nil,
+sleepColor = nil,
+trackColor = nil,
+numberColor = nil,
+thickPointerColor = nil,
+thinPointerColor = nil,
+centerLabelColor = nil
+}
 ```
 See below the full color reference:
 
