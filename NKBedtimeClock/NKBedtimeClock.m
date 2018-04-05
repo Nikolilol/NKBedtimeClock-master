@@ -252,7 +252,7 @@ CGFloat preMoveDiffX = 10086;
         CGFloat sleepAngleY = (radius * adjust) * cos(sleepAngle);
         
         CGPoint wakePoint = CGPointMake(wakeAngleX, wakeAngleY);
-        CGPoint sleepPoint = CGPointMake(sleepAngleX, sleepAngleY);
+        CGPoint sleepPoint = CGPointMake(sleepAngleX * 0.5, sleepAngleY * 0.5);
 
         CGContextDrawLinearGradient(self.context, gradient, wakePoint, sleepPoint, kCGGradientDrawsBeforeStartLocation);
         CGContextDrawLinearGradient(self.context, gradient, wakePoint, sleepPoint, kCGGradientDrawsAfterEndLocation);
