@@ -136,14 +136,16 @@ CGFloat preMoveDiffX = 10086;
 
 # pragma mark - draw rect
 - (void)drawRect:(CGRect)rect{
+//    [super drawRect:rect];
+    
     [self drawActivity];
 }
 
 - (void)drawActivity{
     
-    if (self.context == nil) {
+//    if (self.context == nil) {
         self.context = UIGraphicsGetCurrentContext();
-    }
+//    }
     
     CGContextRef context = self.context;
     if (context) {
