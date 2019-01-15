@@ -1,7 +1,7 @@
 ## NKBedtimeClock
 
 An Objective-C version copy from  [LeonardoCardoso](https://github.com/LeonardoCardoso/BedtimeClock)</br>
-I just add 24-hours calculate part.</br>
+Added 24-hours mechanism based on the origin version.</br>
 This is a view like the clock of bedtime that can set sleep time, wake time and sleep duration time.</br>
 
 ![ScreenShot.gif](Images/ScreenShot.gif)
