@@ -733,7 +733,7 @@ typedef struct {
         
         CGFloat distanceWakeToCenter = hypot(diffX, diffY);
         
-        if (distanceWakeToCenter <= 180 && distanceWakeToCenter >= 130) {
+        if (distanceWakeToCenter >= 130) {
             self.isAnimatingSleep = distanceClickSleep <= 35 && distanceClickSleep <= distanceClickWake;
             
             if (!self.isAnimatingSleep) {
